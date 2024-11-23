@@ -62,11 +62,11 @@ public void keyReleased() {
  }
  
  if (key == 'h') {
-   int bomba = (int)(Math.random()*500);
-   int bomb = (int)(Math.random()*500);
+   int ding = (int)(Math.random()*500);
+   int speed = (int)(Math.random()*500);
    int wilbur = (int)(Math.random()*360);
-   bob.setX(bomba);
-   bob.setY(bomb);
+   bob.setX(ding);
+   bob.setY(speed);
    bob.setYSpeed(0);
    bob.setXSpeed(0);
    bob.setDirect((double)wilbur);
