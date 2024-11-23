@@ -26,23 +26,23 @@ class Spaceship extends Floater
      
     }
     
-   public void setX(int bomb) {
-     myCenterX = bomb;
+   public void setX(int speed) {
+     myCenterX = speed;
    }
    
-   public void setY(int bomb) {
-     myCenterY = bomb;
+   public void setY(int speed) {
+     myCenterY = speed;
    }
    
-      public void setXSpeed(int bomb) {
-     myYspeed = bomb;
+      public void setXSpeed(int speed) {
+     myYspeed = speed;
    }
    
-   public void setYSpeed(int bomb) {
-     myXspeed = bomb;
+   public void setYSpeed(int speed) {
+     myXspeed = speed;
    }
    
-   public void setDirect(double bomb) {
-     myPointDirection = bomb;
+   public void setDirect(double speed) {
+     myPointDirection = speed;
    }
 }
