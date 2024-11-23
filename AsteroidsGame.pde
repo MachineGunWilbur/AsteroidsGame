@@ -1,15 +1,15 @@
 //your variable declarations here
-Star [] david;
+Star [] hamilition;
 Spaceship bob;
 public void setup() 
 {
   size(500,500);
   bob = new Spaceship();
-  david = new Star [500];
+  hamilition = new Star [500];
   
   
-    for(int i =0; i < david.length; i++) {
-    david[i] = new Star();
+    for(int i =0; i < hamilition.length; i++) {
+    hamilition[i] = new Star();
   }
 
   //your code here
@@ -18,9 +18,8 @@ public void draw()
 {
   background(0);
    noStroke();
-    for(int i =0; i < david.length; i++) {
-     
-    david[i].show();
+    for(int i =0; i < hamilition.length; i++) {
+    hamilition[i].show();
   }
   
    bob.show();
