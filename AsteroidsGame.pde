@@ -14,6 +14,29 @@ public void setup()
 
   //your code here
 }
+public void keyReleased() {
+   if (key == 'w') {
+   bassan.setYSpeed(0);
+   bassan.setXSpeed(0);
+ }
+ 
+ if(key == 's') {
+   bassan.setYSpeed(0);
+   bassan.setXSpeed(0);
+ }
+ 
+ if (key == 'h') {
+   int ding = (int)(Math.random()*500);
+   int speed = (int)(Math.random()*500);
+   int wilbur = (int)(Math.random()*360);
+   bassan.setX(ding);
+   bassan.setY(speed);
+   bassan.setYSpeed(0);
+   bassan.setXSpeed(0);
+   bassan.setDirect((double)wilbur);
+ }
+}
+
 public void draw() 
 {
   background(0);
@@ -49,25 +72,3 @@ public void keyPressed() {
 }
 
 
-public void keyReleased() {
-   if (key == 'w') {
-   bassan.setYSpeed(0);
-   bassan.setXSpeed(0);
- }
- 
- if(key == 's') {
-   bassan.setYSpeed(0);
-   bassan.setXSpeed(0);
- }
- 
- if (key == 'h') {
-   int ding = (int)(Math.random()*500);
-   int speed = (int)(Math.random()*500);
-   int wilbur = (int)(Math.random()*360);
-   bassan.setX(ding);
-   bassan.setY(speed);
-   bassan.setYSpeed(0);
-   bassan.setXSpeed(0);
-   bassan.setDirect((double)wilbur);
- }
-}
