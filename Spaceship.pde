@@ -1,5 +1,5 @@
-class Spaceship extends Floater
-{
+class Spaceship extends Floater  
+{   
     public Spaceship() {
      corners = 3;
       myCenterY = 250;
@@ -13,25 +13,25 @@ class Spaceship extends Floater
      xCorners[2] = -8;
      yCorners[2] = 8;
      myColor = color(255);
-
+     
     }
-
+    
    public void setX(int bomb) {
      myCenterX = bomb;
    }
-
+   
    public void setY(int bomb) {
      myCenterY = bomb;
    }
-
+   
       public void setXSpeed(int bomb) {
      myYspeed = bomb;
    }
-
+   
    public void setYSpeed(int bomb) {
      myXspeed = bomb;
    }
-
+   
    public void setDirect(double bomb) {
      myPointDirection = bomb;
    }
