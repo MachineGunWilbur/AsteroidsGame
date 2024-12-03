@@ -1,7 +1,19 @@
 //boooooom
 Star [] hamilition;
 Spaceship bassan;
-
+public void keyReleased() {
+ 
+ if (key == 'h') {
+   int ding = (int)(Math.random()*500);
+   int speed = (int)(Math.random()*500);
+   int wilbur = (int)(Math.random()*360);
+   bassan.setX(ding);
+   bassan.setY(speed);
+   bassan.setYSpeed(0);
+   bassan.setXSpeed(0);
+   bassan.setDirect((double)wilbur);
+ }
+}
 public void keyPressed() {
  if (key == 'w') {
   bassan.accelerate(.1); 
