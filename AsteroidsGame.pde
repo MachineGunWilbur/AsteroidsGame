@@ -1,4 +1,4 @@
-//your variable declarations here
+//boooooom
 Star [] hamilition;
 Spaceship bassan;
 
