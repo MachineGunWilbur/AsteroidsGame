@@ -1,6 +1,27 @@
 //your variable declarations here
 Star [] hamilition;
 Spaceship bassan;
+
+public void keyPressed() {
+ if (key == 'w') {
+  bassan.accelerate(.1); 
+
+ }
+ 
+ if(key == 's') {
+  bassan.accelerate(-.1); 
+ }
+ 
+  if(key == 'd') {
+  bassan.turn(10); 
+ }
+ 
+ if(key == 'a') {
+  bassan.turn(-10); 
+ }
+
+}
+
 public void setup() 
 {
   size(500,500);
@@ -51,24 +72,6 @@ public void draw()
 }
 
 
-public void keyPressed() {
- if (key == 'w') {
-  bassan.accelerate(.1); 
 
- }
- 
- if(key == 's') {
-  bassan.accelerate(-.1); 
- }
- 
-  if(key == 'd') {
-  bassan.turn(10); 
- }
- 
- if(key == 'a') {
-  bassan.turn(-10); 
- }
-
-}
 
 
