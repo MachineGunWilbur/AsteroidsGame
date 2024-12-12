@@ -58,6 +58,7 @@ public void draw()
     for(int i =0; i < hamilition.length; i++) {
    hamilition[i].show();
   }for(int i = 0; i < 20; i ++){
+    mrchan.get(i).move();
     mrchan.get(i).show();
   }
   bassan.show();
