@@ -1,8 +1,8 @@
 //boooooom
 Star [] hamilition;
 Spaceship bassan;
+ArrayList<Astroids> mrchan;
 public void keyReleased() {
- 
  if (key == 'h') {
    int ding = (int)(Math.random()*500);
    int speed = (int)(Math.random()*500);
@@ -37,15 +37,18 @@ public void keyPressed() {
 public void setup() 
 {
   size(500,500);
+  mrchan = new ArrayList<Astroids>();
   bassan = new Spaceship();
   hamilition = new Star [500];
   
   
-    for(int i =0; i < hamilition.length; i++) {
+    for(int i =0; i < hamilition.length - 50 ; i++) {
     hamilition[i] = new Star();
+  }for (int i = 450; i < hamilition.length;i++){
+    hamilition[i] = new bigStar();
+  }for(int i = 0; i < 20; i++){
+    mrchan.add(new Astroids());
   }
-
-  //your code here
 }
 
 public void draw() 
@@ -53,15 +56,10 @@ public void draw()
   background(0);
    noStroke();
     for(int i =0; i < hamilition.length; i++) {
-    hamilition[i].show();
+   hamilition[i].show();
+  }for(int i = 0; i < 20; i ++){
+    mrchan.get(i).show();
   }
-  
-   bassan.show();
+  bassan.show();
   bassan.move();
-  //your code here
 }
-
-
-
-
-
