@@ -3,10 +3,13 @@ Star [] hamilition;
 Spaceship bassan;
 ArrayList<Astroids> mrchan;
 public void keyReleased() {
- if (key == 'h') {
    int ding = (int)(Math.random()*500);
    int speed = (int)(Math.random()*500);
    int wilbur = (int)(Math.random()*360);
+ if (key == 'w'){
+bassan.accelerate(-.05);
+ }
+ if (key == 'h') {
    bassan.setX(ding);
    bassan.setY(speed);
    bassan.setYSpeed(0);
@@ -25,11 +28,11 @@ public void keyPressed() {
  }
  
   if(key == 'd') {
-  bassan.turn(10); 
+  bassan.turn(20); 
  }
  
  if(key == 'a') {
-  bassan.turn(-10); 
+  bassan.turn(-20); 
  }
 
 }
@@ -55,11 +58,18 @@ public void draw()
 {
   background(0);
    noStroke();
+    // Check for collision
+//float distance = dist(bassan.myCenterX,bassan.myCenterY,mrchan.myCenterX, mrchan.myCenterY);
     for(int i =0; i < hamilition.length; i++) {
    hamilition[i].show();
-  }for(int i = 0; i < 20; i ++){
+  }for(int i = 0; i < mrchan.size(); i ++){
     mrchan.get(i).move();
     mrchan.get(i).show();
+    mrchan.get(i).accelerate(Math.random() / 25);
+    mrchan.get(i).turn((int)(Math.random()*100) - (int)(Math.random()*100));
+    if(dist(bassan.getX(),bassan.getY(), mrchan.get(i).getX(), mrchan.get(i).getY())<20){
+      mrchan.remove(i);
+    }
   }
   bassan.show();
   bassan.move();
