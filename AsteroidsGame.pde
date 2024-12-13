@@ -66,7 +66,6 @@ public void draw()
     mrchan.get(i).move();
     mrchan.get(i).show();
     mrchan.get(i).accelerate(Math.random() / 25);
-    mrchan.get(i).turn((int)(Math.random()*100) - (int)(Math.random()*100));
     if(dist(bassan.getX(),bassan.getY(), mrchan.get(i).getX(), mrchan.get(i).getY())<20){
       mrchan.remove(i);
       i--;
