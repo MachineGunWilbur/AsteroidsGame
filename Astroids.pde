@@ -1,7 +1,5 @@
 class Astroids extends Floater {
-  private int rotSpeed;
   public Astroids() {
-    rotSpeed = (int)(Math.random()*100) - (int)(Math.random()*100);
     corners = 6;
     myCenterY = Math.random()*500;
     myCenterX = Math.random()*500;
@@ -29,11 +27,11 @@ class Astroids extends Floater {
      myCenterX = speed;
    }
    public void move ()   //move the floater in the current direction of travel
-  { 
+  {      
     //change the x and y coordinates by myXspeed and myYspeed       
     myCenterX += myXspeed + (int)(Math.random() *10) - (int)(Math.random() *10);    
     myCenterY += myYspeed + (int)(Math.random() *10) - (int)(Math.random() *10);     
-    turn(rotSpeed);
+
     //wrap around screen    
     if(myCenterX >width)
     {     
